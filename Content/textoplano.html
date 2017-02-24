@@ -3,7 +3,6 @@
   </head>
   <body>
     <h1>Git---</h1>
-    <p>http://blog.fiqus.webfactional.com/wp-content/uploads/2014/05/git_manual.pdf</p>
     <p class="question">¿Qué es un sistema de control de versiones?</p>
     <p class="answer">Un sistema de control de versiones (CVS) te permite realizar un seguimiento de la historia de una colección de archivos
       y además incluye la funcionalidad de revertir a una versión anterior.a colección de archivos usualmente es
@@ -13,7 +12,7 @@
      <p class="question">¿Qué es sistema de control de versiones distribuidas?</p>
     <p class='answer'>Un sistema de control de versiones distribuida tiene un servidor central para guardar el repositorio y cada ususario puede hacer
        una copia completa del repositorio central y por ser una copia completa tiene las misma funcionalidades que el repositoriuo original</p>
-       <img src="whatISgit.png" alt="Mountain View" style="width:700px;height:500px;">
+       <img src="whatISgit.png" style="width:700px;height:500px;">
        <p class="question">¿Qué es Git</p>
       <p class='answer'>Es un sistema de control de versiones distribuida que tiene su origen  a partir del del desarrollo de kernel de Linux.
         Es muy utilizado por proyectos comerciales de verciones como Android o Eclipse.
@@ -79,31 +78,107 @@ para el próximo commit.</li>
       <p class='answer'>Crea un directorio nuevo, ábrelo y ejecuta
           <code>git init </code>
           para crear un nuevo repositorio de git.<p>
-        <img src="gitInit.png" alt="Mountain View">
+        <img src="gitInit.png">
         <p class="question">hacer checkout a un repositorio<p>
 Crea una copia local del repositorio ejecutando
 <code>git clone /path/to/repository</code>
 Si utilizas un servidor remoto, ejecuta
 <code>git clone username@host:/path/to/repository</code>
 </p>
-<img src="madeClone.png" alt="Mountain View">
+<img src="madeClone.png">
 
        <h3>Añadiendo nuevos ficheros</h3>
 <p>Así que tenemos un repositorio, pero no hay nada en ella. Puede agregar archivos con el comando add.
 <code>git add filename</code></p>
-<img src="gitAdd.png" alt="Mountain View">
+<img src="gitAdd.png">
 
 <p class=""></p>
          <p class="question">Cometer un Versión</p>
 <p class='answer'><p>
 Ahora que hemos añadido estos archivos, queremos que se pueden almacenar en realidad en el repositorio Git. Hacemos esto de enviarlos al repositorio.
 <code>git commit -m "Adding files"</code></p>
-<img src="gitCommit.png" alt="Mountain View">
+<img src="gitCommit.png">
 
         <p class='answer'>Estado del git<p>
           <p class="question">Muestra el estado del árbol de trabajo <code>git status</code></p>
-          <img src="gitStatus.png" alt="Mountain View">
+          <img src="gitStatus.png">
 
-         <p class='answer'><p>
+
+         <p class='answer'>envío de cambios<p>
+        <p class="question">Resulta útil pensar en los branches como contextos, ya que es la forma en que
+se usan más a menudo. Cuando realizas cambios de ramas, se cambian los
+contextos en que se están trabajando y podés rápidamente cambiar de contexto
+entre las diferentes ramas.</p>
+
+   <p class='answer'>Deshace cambios y commits<p>
+     <p class='question'> <code>git reset HEAD </code>deshacer el último commit y sacar del staging area
+los archivos modificados</p>
+
+<p class='answer'>Remueve archivos del staging area<p>
+  <p class='question'> <code>git rm</code>Saca la entrada del archivo en el index, de manera que no va a ser tenido
+más en cuenta para el próximo commit.</p>
+
+   <h3>Creando y administrando ramas</h3>
+
+   <p class='answer'>git branch </p>
+     <p class='question'> <code>git branch</code>Listará las ramas locales que tengas.</p>
+
+  <p class='answer'>git branch (name_newBranch)</p>
+    <p class='question'> <code>>git branch (name_newBranch)</code>Crear una nueva rama y cambiar a ella</p>
+
+  <p class='answer'>git branch -d (name_delBranch)</p>
+    <p class='question'> <code>git branch -d (name_delBranch)</code>Eliminará la rama </p>
+
+  <p class='answer'> git checkout -b (name_newBranch) </p>
+    <p class='question'> <code> git checkout -b (name_newBranch)</code>Crear y cambiar inmediatamente a la nueva rama</p>
+
+  <p class='answer'>git merge</p>
+    <p class='question'> <code> git merge (branch)</code>Combinar la rama especificada en la rama actual.</p>
+<img src="gitMerge.png" >
+
+<p class='answer'>git log</p>
+  <p class='question'> <code> git log --oneline </code>Muestra  la historia del desarrollo de este proyecto</p>
+  <img src="gitLog.png" >
+
+
+<p class='answer'>git log --oneline --graph</p>
+  <p class='question'> <code>git log --oneline --graph</code>Podemos ver más claramente cuando las ramas se separaron y luego
+cuando se fusionaron de nuevo.</p>
+  <img src="gitLogGraph.png" >
+
+  <p class='answer'>git tag </p>
+    <p class='question'> <code> git -a v1.0 </code> El comando tag, básicamente, consiste en poner un marcador permanente en un commit en concreto
+para que pueda ser usado para comparar con otro commit en el futuro. </p>
+    <img src="gitTag.png" >
+
+       <h3>Intercambio y actualización de Proyectos</h3>
+       <p class='answer'>git pull </p>
+         <p class='question'> <code> git pull (github) </code> busca en un repositorio remoto y trata de combinar en la
+rama actual lo que trajo del remoto. </p>
+
+<p class='answer'>git fetch </p>
+  <p class='question'> <code> git fetch (github)  </code> se usa para sincronizar el repositorio local con otro remoto, bajando los datos
+no tenes a nivel local </p>
+
+<p class='answer'>git push </p>
+  <p class='question'> <code> git push (github)   </code> Actualiza las refs remotas usando refs locales, mientras envía objetos necesarios para completar las refs dadas </p>
+
+
+
+
+
+         <img src="gitRes.png" >
+
+
+
+
+
+
+
+
+
+
+
+
   <body>
 </html>
