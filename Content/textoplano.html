@@ -8,42 +8,6 @@
 
 <body>
 
-    <div class="menuVertical">
-
-      <ul id="navigationMenu">
-    <li>
-	    <a class="home" href="#">
-            <span>Home</span>
-        </a>
-    </li>
-
-    <li>
-    	<a class="about" href="#">
-            <span>About</span>
-        </a>
-    </li>
-
-    <li>
-	     <a class="services" href="#">
-            <span>Services</span>
-         </a>
-    </li>
-
-    <li>
-    	<a class="portfolio" href="#">
-            <span>Portfolio</span>
-        </a>
-    </li>
-
-    <li>
-    	<a class="contact" href="#">
-            <span>Contact us</span>
-        </a>
-    </li>
-</ul>
-
-    </div>
-
 
     <div class="content">
 
@@ -63,7 +27,7 @@
             </p>
           <div class="uno">
 
-          <img  src="whatISgit.png">
+        <img src="img/whatISgit.png">
           </div>
         </p>
         <p class="comandos">
@@ -112,7 +76,7 @@
             </p>
 
 
-            <img src="gitInit.png">
+            <img src="img/gitInit.png">
             <p class="question">hacer checkout a un repositorio</p>
         </p>
         <p class="comandos">
@@ -120,30 +84,30 @@
                 <br><code>git clone /path/to/repository</code></br> Si utilizas un servidor remoto, ejecuta
                 <br><code>git clone username@host:/path/to/repository</code></br>
             </p>
-            <img src="madeClone.png">
+            <img src="img/madeClone.png">
         </p>
-        <h3>Añadiendo nuevos ficheros</h3>
+        <p class="sub-title">Añadiendo nuevos ficheros</p>
 
 
         <p class="comandos">
             <p>Así que tenemos un repositorio, pero no hay nada en ella. Puede agregar archivos con el comando add.
                 <br><code>git add filename</code></br>
             </p>
-            <img src="gitAdd.png">
+            <img src="img/gitAdd.png">
         </p>
         <p class="comandos">
             <p class="answer">Realizar un commit</p>
             <p class="question"> Ahora que hemos añadido estos archivos, queremos que se pueden almacenar en realidad en el repositorio Git. Hacemos esto de enviarlos al repositorio.
                 <br><code>git commit -m "Adding files"</code></br>
             </p>
-            <img src="gitCommit.png">
+            <img src="img/gitCommit.png">
         </p>
 
         <p class="comandos">
             <p class="answer">Estado del git </p>
             <p class="question">Muestra el estado del árbol de trabajo <br><code>git status</code></br>
             </p>
-            <img src="gitStatus.png">
+            <img src="img/gitStatus.png">
 
         </p>
         <p class="comandos">
@@ -163,7 +127,7 @@
             <p class="question"> Saca la entrada del archivo en el index, de manera que no va a ser tenido más en cuenta para el próximo commit.<br><code>git rm</code></br>
             </p>
         </p>
-        <h3>Creando y administrando ramas</h3>
+        <p class="sub-title">Creando y administrando ramas</p>
 
         <p class="comandos">
             <p class="answer">git branch </p>
@@ -189,29 +153,29 @@
             <p class="answer">git merge</p>
             <p class="question"> Combinar la rama especificada en la rama actual.<br><code> git merge (branch)</code></br>
             </p>
-            <img src="gitMerge.png">
+            <img src="img/gitMerge.png">
         </p>
         <p class="comandos">
             <p class="answer">git log</p>
             <p class="question"> Muestra la historia del desarrollo de este proyecto<br><code> git log --oneline </code></br>
             </p>
-            <img src="gitLog.png">
+            <img src="img/gitLog.png">
 
         </p>
         <p class="comandos">
             <p class="answer">git log --oneline --graph</p>
             <p class="question"> Podemos ver más claramente cuando las ramas se separaron y luego cuando se fusionaron de nuevo.<br><code>git log --oneline --graph</code></br>
             </p>
-            <img src="gitLogGraph.png">
+            <img src="img/gitLogGraph.png">
         </p>
         <p class="comandos">
             <p class="answer">git tag </p>
             <p class="question"> El comando tag, básicamente, consiste en poner un marcador permanente en un commit en concreto para que pueda ser usado para comparar con otro commit en el futuro.
                 <br><code> git -a v1.0 </code></br>
             </p>
-            <img src="gitTag.png">
+            <img src="img/gitTag.png">
         </p>
-        <h3>Intercambio y actualización de Proyectos</h3>
+          <p class="sub-title">Intercambio y actualización de Proyectos</p>
         <p class="comandos">
             <p class="answer">git pull </p>
             <p class="question"> Busca en un repositorio remoto y trata de combinar en la rama actual lo que trajo del remoto.<br><code> git pull (github) </code></br>
@@ -227,7 +191,7 @@
             <p class="question"> Actualiza las refs remotas usando refs locales, mientras envía objetos necesarios para completar las refs dadas <br><code> git push (github)   </code></br>
             </p>
 
-            <img src="gitRes.png">
+            <img src="img/gitRes.png">
         </p>
     </div>
 
