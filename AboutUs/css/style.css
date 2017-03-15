@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+        font-family: 'Raleway', sans-serif;
 }
 
 .main-container {
@@ -19,7 +20,6 @@ body {
     width: 50%;
     padding: 45px;
     margin: 0 auto;
-    font-family: 'Raleway', sans-serif;
     color: #fff;
     font-size: 1.3em;
     text-align: center;
@@ -30,7 +30,9 @@ body {
     padding: 0;
     margin: 0 auto;
     background-color: #fff;
-    border-radius: 100px;
+
+    border-radius:5px;
+
     /*border-top: 5px solid #e23d3d;
     border-bottom: 5px solid #e23d3d;
     border-left: 5px solid #e23d3d;
@@ -39,24 +41,29 @@ body {
     text-align: center;
     overflow: hidden;
     display: flex;
+    align-items: center;
     justify-content: space-around;
 }
 
 #gustavo-img {
-    background-image: url("/home/horabaixa/Escritorio/2ª Evaluación/GIT-HTML-CSS/AboutUs/img/test.png");
+
+    background-image: url("./img/gustavo.png");
 }
 
 #patryk-img {
-    background-image: url("/home/horabaixa/Escritorio/2ª Evaluación/GIT-HTML-CSS/AboutUs/img/test.png");
+    background-image: url("./img/patryk.png");
 }
 
 #matias-img {
-    background-image: url("/home/horabaixa/Escritorio/2ª Evaluación/GIT-HTML-CSS/AboutUs/img/test.png");
+    background-image: url("./img/matias.png");
 }
 
 .img {
-    margin: auto;
-    /*background-color: red;*/
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
     width: 150px;
     height: 150px;
     background-repeat: no-repeat;
@@ -64,13 +71,35 @@ body {
     background-size: 80% auto;
     cursor: pointer;
     transition: all .3s;
+    border-radius: 100%;
+    background-color: rgba(0,0,0,.1);
+    margin:10px;
+    overflow: hidden;
+}
+
+.img p{
+  line-height: 150px;
+  margin:auto;
+  width:100%;
+  height:100%;
+  opacity:0;
+  border-radius: 100%;
+  transition: all .2s;
+}
+
+.img:hover p{
+  transition: all .2s;
+opacity: 1;
+background-color: rgba(0,0,0,.1);
 }
 
 .dynamic-img {
     float: left;
     width: 220px;
     height: 220px;
-    content: url("/home/horabaixa/Escritorio/2ª Evaluación/GIT-HTML-CSS/AboutUs/img/test.png");
+
+    content: url("./img/test.png");
+
     background-color: #fff;
 }
 
