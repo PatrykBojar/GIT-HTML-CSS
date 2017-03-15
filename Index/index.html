@@ -2,7 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>GUÍA DE GIT</title>
+    <title>GUÍA DE GIT.</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
 
 <style>
 
@@ -12,6 +14,10 @@ body{
   font-family: "Josefin Sans", sans-serif, arial, helvetica;
   margin:0;
   padding:0;
+}
+
+img{
+  border-radius:5px;
 }
 .main-container{
 width:100%;
@@ -24,123 +30,789 @@ background: linear-gradient(to left, #232526 , #414345); /* W3C, IE 10+/ Edge, F
 
 color:white;
 text-align: center;
-padding-top:50px;
+padding-top:20px;
 }
 
-.logo{
-  width:200px;
-  height:200px;
+.icon{
+  width:100px;
+  height:100px;
   margin:0 auto;
-  background-image: url("./img/logo.png");
-  background-size: 100% auto;
+  background-size: 90% auto;
   background-position: center;
   background-repeat: no-repeat;
+  transition: all .2s;
+
+}
+
+.myBtn:hover .icon{
+  cursor: pointer;
+  transition: all .2s;
+  background-size: 100% auto;
+}
+
+
+
+.git{
+  background-image: url("./img/git.png");
+}
+
+.github{
+
+  background-image: url("./img/github.png");
+}
+
+.people{
+  background-image: url("./img/people.png");
 }
 
 .welcome{
   width:40%;
-  padding:20px;
   border-radius: 5px;
   margin: 0 auto;
+  margin-bottom:50px;
+  box-sizing: border-box;
 }
 
 h1{
+  margin:0;
+  padding:0 0 20px;
   font-weight: bold;
 }
 
 .dialog{
+
   width:50%;
+  height:20%;
   overflow: hidden;
-  margin:0 auto;
-  background-color:#fff;
-  border-top:10px solid rgb(242,79,41);
-  color:#686868;
+  margin:auto;
+  color:#fff;
+  text-align: center;
   border-radius:5px;
   padding:20px;
 }
 
-.select-os{
-  padding:20px;
-}
-.icon{
-  width:100px;
-  height:100px;
-  margin-left:50px;
-  margin-right:50px;
-  background-size: 90% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: inline-block;
-  cursor: pointer;
-  transition: all .2s;
+.welcome-message{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  height:100vh;
+  background: #FFAFBD; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #FFAFBD , #ffc3a0); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #FFAFBD , #ffc3a0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
-.icon:hover{
+.welcome-message h1{
+  position:absolute;
+  top:0;left:0;right:0;bottom:0;
+
+  width:50%;
+  text-align: center;
+  height:110px;
+  margin:auto;
+  color:white;
+  padding:0;
+  box-sizing: border-box;
+  font-size:60px;
+  padding:10px 0;
+  border-top:5px solid rgb(255,255,255);
+  border-bottom:5px solid rgb(255,255,255);
+}
+
+.myBtn{
+  width:33.20%;
+  float:left;
+}
+
+.wrapper{
+  height:100vh;
+  background-color: #f0f0f0;
+}
+
+.wrapper ul{
+  padding:0;
+  margin:0;
+  list-style: none;
+}
+
+.temas-container{
+  background-color:#3d3d3d;
+  color: white;
+  width:20%;
+  float:left;
+  height:100vh;
+  border-right:2px solid rgba(0,0,0,.2);
+  box-sizing: border-box;
+}
+
+.temas-container ul li{
+  margin:20px;
+  padding:10px;
+}
+
+.temas-container ul li:not(:first-of-type){
+  margin-left:30px;
+}
+
+.active{
+  border-radius:5px;
+  background-color: rgba(0,0,0,.1);
+  color:coral;
+}
+
+.back{
+  float:right;
+  cursor: pointer;
+  border:0;
+  border-radius:5px;
+  background-color: transparent;
+  width:50px;
+  height:50px;
+  padding:5px;
+  background-image: url("./img/back.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: content-box;
   background-size: 100% auto;
 }
 
-.windows{
-  background-image: url("./img/windows.png");
+.back:hover{
+  background-color: rgba(0,0,0,.05);
 }
 
-.ubuntu{
-  background-image: url("./img/ubuntu.png");
+.tema-content-container{
+  width:80%;
+  float:left;
+  height:100vh;
+  padding:50px;
+  box-sizing: border-box;
+    color: #31464D;
+    overflow-y: auto;
 }
 
-.terminal{
-  background-image: url("./img/terminal.png");
+.tema-content-container .titulo-tema{
+  font-size:40px;
+  margin:50px;
+  text-align: center;
+  color: #31464D;
 }
 
-.gui{
-  background-image: url("./img/gui.png");
+.tema-content-container .question{
+  font-size:25px;
+
 }
 
+.tema-content-container .answer{
+  background-color: rgba(0,0,0,.1);
+  padding:10px;
+  border-radius: 5px;
+  margin-bottom:50px;
+  text-align: justify;
+}
+
+.tema-content-container ul{
+  list-style: circle;
+  background-color: rgb(247, 245, 215);
+}
+
+.tema-content-container ul li{
+  padding: 10px;
+}
 
 </style>
 
   </head>
   <body>
 
-    <div class="main-container">
+  <div class="welcome-message">
+
+    <h1>BIENVENIDO</h1>
+
+        <div class="dialog">
+
+          <p>Elija una opción:</p>
+
+              <div class="myBtn">
+                <div class="git icon">
+
+                </div>
+              <p>  GIT</p>
+              </div><div class="myBtn">
+                <div class="github icon">
+
+                </div>
+                <p>GITHUB</p>
+              </div><div class="myBtn">
+                <div class="people icon">
+
+                </div>
+                <p>QUIÉNES SOMOS</p>
+              </div>
+
+            </div>
+  </div>
+
+<section id="git" class="wrapper">
+
+<div class="temas-container">
+
+  <ul>
+    <li><p>Índice</p></li>
+    <li class="active"><p>Tema 0. ¿Qué es GIT?</p></li>
+    <li><p>Tema 1. ¿Qué es GIT?</p></li>
+    <li><p>Tema 2. ¿Qué es GIT?</p></li>
+    <li><p>Tema 3. ¿Qué es GIT?</p></li>
+    <li><p>Tema 4. ¿Qué es GIT?</p></li>
+  </ul>
 
 
-      <div class="welcome">
-      <h1>BIENVENIDO</h1>
+</div><div class="tema-content-container">
+<button type="button" name="button" class="back"></button>
 
-      <div class="logo"></div>
-    </div>
+<section>
+  <h1 class="titulo-tema">GIT</h1>
 
-    <div class="dialog">
+    <p class="question">¿Qué es un sistema de control de versiones?</p>
 
-      <div class="select-os">
-        <p>Selecciona tu SO</p>
-        <div class="windows icon">
-
-        </div>
-        <div class="ubuntu icon">
-
-        </div>
-      </div>
-
-      <div class="select-mode">
-        <p>Selecciona modalidad</p>
-
-        <div class="terminal icon">
-
-        </div>
-
-        <div class="gui icon">
-
-        </div>
-
-      </div>
-
-    </div>
+                <p class="answer">Un sistema de control de versiones (CVS) te permite realizar un seguimiento de la historia de una colección de archivos y además incluye la funcionalidad de revertir a una versión anterior.a colección de archivos usualmente es código fuente
+                    de algún lenguaje de programación, sin embargo, un sistema de control de versiones funciona con cualquier tipo de archivo</p>
 
 
+                    <p class="question">¿Qué es sistema de control de versiones distribuidas?</p>
 
-    </div>
 
+                            <p class="answer">Un sistema de control de versiones distribuida tiene un servidor central para guardar el repositorio y cada ususario puede hacer una copia completa del repositorio central y por ser una copia completa tiene las misma funcionalidades que el
+                                repositoriuo original
+                            </p>
+
+                        <img src="img/whatISgit.png">
+
+
+                                                <p class="question">¿Qué es GIT?</p>
+
+                                                <p class="answer">
+                                                  Es un sistema de control de versiones distribuida que tiene su origen a partir del del desarrollo de kernel de Linux. Es muy utilizado por proyectos comerciales de verciones como Android o Eclipse. Git modela sus datos más como un conjunto de instantáneas de un mini sistema de archivos Cada vez que confirmas un cambio, o guardas el estado de tu proyecto en Git
+
+                          El repositorio local
+
+                          Luego de clonar o crear un repositorio el usuario tiene una copia completa del repositorio, y puede realizar operaciones de control de versiones contra este repositorio local, como por ejemplo crear nuevas versiones, revertir cambios, etc. El flujo de trabajo básico en Git es algo así</p>
+
+                          <ul>
+                            <li>Modificas una serie de archivos en tu directorio de trabajo (working directory).</li>
+                            <li>Añadís instantáneas de los archivos a tu área de preparación (staging area).</li>
+                            <li>Confirmas los cambios, lo que toma los archivos tal y como están en el área de preparación, y almacena esa instantánea de manera permanente en tu directorio de Git (git directory).</li>
+                          </ul>
+
+
+                          <p class="question">Repaso de algunos conceptos útiles:</p>
+
+                          <ul>
+                            <li>Repositorio: Un repositorio contiene la historia, las diferentes versiones en el tiempo y todas las diferentes ramas. En Git cada copia del repositorio es un repositorio completo. Si el repositorio en el que estás trabajando no es creado con la opción “bare”, entonces permite hacer un checkout de las revisiones que desees en tu repositorio local.</li>
+                            <li>Working tree: Posee el contenido de un commit que se puede obtener haciendo un checkout desde un repositorio git. Luego uno puede modificar ese contenido y hacer un nuevo commit con los cambios al repositorio.</li>
+                            <li>Branch (rama): Un branch es un puntero con un nombre determinado por el usuario que apunta a un commit. Posicionarse en un branch utilizando git es denominado como “hacer un checkout” de ese branch. Si estás trabajando en un determinado branch, la creación de un nuevo commit hace avanzar el puntero a esta nueva instancia. Cada commit conoce sus antecesores así como a sus sucesores en caso de tenerlos. Uno de los branches es el default, generalmente llamado master.</li>
+                            <li>Tag: Un tag apunta a un commit que unívocamente identifica una versión del repositorio. Con un tag, podés tener un puntero con nombre al que siempre puedas revertir los cambios. Por ejemplo, la versión de 25.01.2009 del branch “testing”.</li>
+                            <li>Commit: Vos commiteas los cambios a un repositorio. Esto crea un nuevo objeto commit en el repositorio que unívocamente identifica una nueva versión del contenido del repositorio. Esta revisión puede ser consultada posteriormente, por ejemplo si uno quiere ver el código fuente de una versión anterior. Cada commit posee metadata que nos informa acerca del autor, la fecha y otros datos que nos pueden resultar prácticos a la hora de tratar de encontrar uno determinado.</li>
+                            <li>URL: Una URL en Git determina la ubicación de un repositorio. Revisión: Representa una versión del código fuente. Git implementa las revisiones de la misma manera que los objetos commit.</li>
+                            <li>HEAD: Es un objeto simbólico que apunta generalmente al branch sobre el que estamos trabajando (lo que también conocemos como “checked out branch”). Si uno cambia de un branch al otro el HEAD apunta al último commit del branch seleccionado. Si uno hace un checkout de un determinado commit, el HEAD apunta a ese commit.</li>
+                            <li>Staging area: Es el lugar en el que se almacenan los cambios del working tree previos al commit. Es decir, contiene el set de cambios relevantes para el próximo commit.</li>
+                            <li>Index: Es un término alternativo para referirnos al staging area.</li>
+                          </ul>
+
+
+                          <p class="question">Comándos básicos en GIT</p>
+
+                          <p class="answer">Crea un directorio nuevo, ábrelo y ejecuta <code>git init</code> para crear un nuevo repositorio de git.
+                          </p>
+
+                          <img src="img/gitInit.png">
+
+                          <p class="question">Hacer checkout a un repositorio</p>
+
+                          <p class="answer">Crea una copia local del repositorio ejecutando
+                              <br><code>git clone /path/to/repository</code></br> Si utilizas un servidor remoto, ejecuta
+                              <br><code>git clone username@host:/path/to/repository</code></p>
+
+                              <img src="img/madeClone.png">
+
+
+                              <p class="question">Añadiendo nuevos ficheros</p>
+
+                              <p class="answer">Así que tenemos un repositorio, pero no hay nada en ella. Puede agregar archivos con el comando add.
+                                  <br><code>git add filename</code></p>
+
+                                  <img src="img/gitAdd.png">
+
+
+                                  <p class="question">Realizar un commit</p>
+
+                                  <p class="answer">Ahora que hemos añadido estos archivos, queremos que se pueden almacenar en realidad en el repositorio Git. Hacemos esto de enviarlos al repositorio.
+                                      <br><code>git commit -m "Adding files"</code></p>
+
+                                      <img src="img/gitCommit.png">
+
+                                      <p class="question">Estado de GIT</p>
+
+                                      <p class="answer">Muestra el estado del árbol de trabajo <br><code>git status</code></p>
+
+
+                                      <p class="question">Envío de cambios</p>
+
+                                      <p class="answer"> Deshace el último commit y sacar del staging area los archivos modificados<br><code>git reset HEAD </code></br>
+                                      </p>
+
+
+                                      <p class="question">Deshace cambios y commits </p>
+                                      <p class="answer"> Deshace el último commit y sacar del staging area los archivos modificados<br><code>git reset HEAD </code></br>
+                                      </p>
+                          <p class="question">Remueve archivos del staging area
+                                      </p>
+                                      <p class="answer"> Saca la entrada del archivo en el index, de manera que no va a ser tenido más en cuenta para el próximo commit.<br><code>git rm</code></br>
+                                      </p>
+                          <p class="question">git branch </p>
+                                      <p class="answer"> Listará las ramas locales que tengas.<br><code>git branch</code></br>
+                                      </p>
+                          <p class="question">git branch</p>
+                                      <p class="answer">Crear una nueva rama y cambiar a ella <br><code>git branch (name_newBranch)</code></br>
+                                      </p>
+
+                                      <p class="question">Añadir una rama remota</p>
+
+                                      <p class="answer">Las ramas remotas referencian el estado de nuestras ramas locales. Son ramas locales que no puedes mover, se mueven automáticamente cuando estableces comunicaciones en la red.
+                                      <br><br>Es decir, tu rama local tendrá una sombra, que será la rama remota, la cual se irá actualizando a medida que hagamos commits desde nuestro ordenador a la rama local.
+                                      <br>
+                                      Para actualizar la rama remota con los cambios deseados tendremos que escribir
+                                      <code>git push -u origin <nombre_rama></code>
+                                        <br>
+                                      -u lo pondremos si creamos nuestra rama por primera vez.</p>
+
+
+
+                          <p class="question">git branch -d</p>
+                                      <p class="answer">Eliminará la rama <br><code>git branch -d (name_delBranch)</code></br>
+                                      </p>
+
+                                      <p class="question">git checkout <rama></p>
+                                        <p class="answer">
+                                      Con este comando podemos hacer tres funciones distintas:</p>
+                                      <ul>
+                                        <li>Comprobar los archivos</li>
+                                        <li> Comprobar los commits</li>
+                                        <li>Comprobar las ramas</li>
+                                      </ul>
+
+                                      <p class="answer">Para los archivos y commits:<br> Podemos retroceder versiones de los archivos y commits
+                                      haciendo un checkout, que veremos a continuación.<br>
+                                      El checkout tiene los siguientes comandos:<br>
+                                      <code>git checkout master</code><br>
+                                      <code>git checkout <commit> <archivo></code><br>
+                                      <code>git checkout <commit></code><br>
+                                      <code>git checkout HEAD <archivo></code></p>
+
+
+                                        <p class="answer">Creamos un archivo con el nombre “checkout_archivo”.
+Su contenido contendrá letras, luego de esto, hacemos un commit.</p>
+
+<img src="./img/gitcheckout1.png" alt="">
+
+<p class="answer">
+Ahora añadiremos más texto al archivo y haremos otro commit, entonces, podremos usar
+el comando checkout para retroceder a su forma original (imagen de arriba).</p>
+
+<img src="./img/gitcheckout2.png" alt="">
+
+<p class="answer">Así queda la lista de commits actual:</p>
+
+<img src="./img/gitcheckout3.png" alt="">
+
+
+<p class="answer">Y ahora usaremos el comando <code>git checkout <commit> <archivo></code>.
+</p>
+
+<img src="./img/gitcheckout4.png" alt="">
+
+<p class="answer">De esta forma revertimos todos los cambios hechos en el commit “Modificación 3…” y
+convertimos el archivo en una versión temporal del commit “Probando el checkout”.<br>
+Para guardar todos los cambios que hemos hecho, escribimos:<br>
+<code>git checkout master.</code><br>
+Al volver a la rama master se nos guardará el progreso.</p>
+
+
+<p class="answer">Con git checkout 8298fed (commit anterior a “Probando el checkout”) nos situaremos
+en un “espacio virtual” donde estaremos en la misma versión del proyecto que el <code>commit
+8298fed</code>.<br><br>
+De esta forma, podremos modificar todo lo que queramos sin preocuparnos de perder el
+estado actual del proyecto.<br>
+Para guardar los cambios que hicimos nos situaremos en la rama master git checkout
+master.</p>
+
+
+<p class="answer">Ejemplo anterior con otro commit, nos hemos situado en el proyecto donde el commit
+introducido es el último. Aquí podemos hacer todos los cambios, si los queremos guardar
+solo tendremos que crear una rama nueva.<br><br>
+(Anteriormente he creado una rama list para conservar los cambios).</p>
+
+
+
+<img src="./img/gitcheckout5.png" alt="">
+
+<br><br>
+
+
+
+
+<p class="question">git revert</p>
+
+<p class="answer">Con esta función podemos revertir los commits, no los eliminamos, es como un comando
+“undo”. De esta forma podemos prevenir perder datos en nuestro proyecto.<br><br>
+Es importante saber que con esta función podemos deshacer un solo commit.
+</p>
+
+<p class="answer">
+  Comandos:<br>
+  <code>git revert <commit></code><br>
+  <code>git revert HEAD</code></p>
+
+  <img src="./img/gitrevert1.png" alt="">
+
+
+<p class="answer">Revertir tiene dos importantes ventajas sobre resetear:
+</p>
+
+<ul>
+  <li>No elimina el historial del proyecto, que lo hace seguro.</li>
+  <li> Es capaz de seleccionar un commit individual en un punto arbitrario de la historia.</li>
+</ul>
+
+
+<p class="answer">Ahora veremos un ejemplo:
+</p>
+
+<img src="./img/gitrevert2.png" alt="">
+
+<p class="answer">Creamos un commit, el <b>bc50bcb</b>, el cual ahora desharemos.</p>
+
+<img src="./img/gitrevert3.png" alt="">
+
+<p class="answer">Usamos git revert HEAD para revertir los cambios.</p>
+
+<p class="answer">El ejemplo anterior se podría visualizar de la siguiente forma:</p>
+
+<img src="./img/gitrevert4.png" alt="">
+
+<p class="question">git reset</p>
+
+<p class="answer">Git reset, igual que git revert, nos da la opción de deshacer nuestros cambios.<br>
+Sin embargo, git reset es permanente. Es decir, al deshacer cambios, no podemos
+rehacerlos.<br><br>
+Esto significa que no debe utilizarse git reset cuando se está trabajando en un
+repositorio público. Ya que cuando publiques un trabajo en el que has borrado commits
+y otros usuarios que aún tienen esos commits traten de sincronizarse contigo, parecerá
+que parte del proyecto ha desaparecido.<br><br>
+Git reset se puede utilizar de diferentes formas:<br>
+
+<code>git reset <file></code><br>
+<code>git reset</code><br>
+<code>git reset --hard</code><br>
+<code>git reset <commit></code><br>
+<code>git reset --hard <commit></code>
+
+</p>
+
+
+<p class="answer">El comando <code>git reset <file></code> (<file> siendo el documento que queremos que
+afecte) sirve para borrar un documento, manteniendo el directorio inafectado.</p>
+
+<img src="./img/gitreset1.png" alt="">
+
+
+<p class="answer">El siguiente comando, git reset, funciona exactamente igual que el anterior, pero
+afecta a todos los documentos.</p>
+
+<img src="./img/gitreset2.png" alt="">
+
+<p class="answer">Usando <code>git reset --hard</code>, es posible <b>borrar por completo<b> cualquier cambio que no
+se haya incluído todavía en un commit. </p>
+
+<img src="./img/gitreset3.png" alt="">
+
+<p class="answer">Usando el comando <code>git reset <commit></code> (<commit> siendo el código del commit al
+que queramos referirnos) podemos retroceder hasta el commit que elijamos, haciendo
+que cualquier cambio que hayamos hecho a partir de dicho commit se quede como un
+documento sin seguimiento, lo cual nos permite modificarlos y añadirlos a otro commit
+si lo deseamos.</p>
+
+<img src="./img/gitreset4.png" alt="">
+
+<p class="answer">El comando <code>git reset --hard <commit></code> (<commit> siendo el código del commit
+que elijamos) funciona de manera similar a <code>git reset <commit></code>. La diferencia
+principal entre los dos es que <code>git reset --hard <commit></code>, no solo nos hace
+retroceder hasta el commit que elijamos, sino que también borra por completo
+cualquier documento que se haya añadido en los commits posteriores.</p>
+
+<img src="./img/gitreset5.png" alt="">
+
+
+
+<p class="question">git clean</p>
+
+
+<p class="answer">El comando git clean nos permite borrar todos archivos sin seguimiento que puedan
+haber en el directorio de trabajo.<br><br>
+Al contrario que el comando rm, que nos permite eliminar cada archivo de forma
+manual, git clean es definitivo, y no pueden deshacerse los cambios hechos con él.
+Es posible combinar este comando con git reset --hard para restaurar nuestro
+directorio al mismo estado de un commit en concreto.<br><br>
+Existen múltiples comandos relacionados con git clean:<br>
+<code>git clean -n</code><br>
+<code>git clean -f</code><br>
+<code>git clean -f <path></code><br>
+<code>git clean -df</code><br>
+<code>git clean -xf</code><br></p>
+
+<p class="answer">Usando <code>git clean -n</code>, podemos ver qué documentos serán borrados antes de cometer
+ningún cambio.</p>
+
+<img src="./img/gitclean1.PNG" alt="">
+
+<p class="answer">Para borrar los documentos, usamos <code>git clean -f</code>. -f (force) debe incluirse para
+que el comando se ejecute a no ser que la opción clean.requireForce esté marcada
+como false. Esto sirve como medida de seguridad para evitar borrar documentos por
+accidente.
+</p>
+
+<img src="./img/gitclean2.PNG" alt="">
+
+
+<p class="answer">También es posible escribir <code>git clean -f <path></code>, <path> siendo el lugar donde
+queremos que se limite el comando.</p>
+
+<img src="./img/gitclean3.PNG" alt="">
+
+<p class="answer">El comando <code>git clean -df</code> nos permite eliminar tanto documentos sin seguimiento
+como directorios sin seguimiento.
+</p>
+
+<p class="answer">Con git clean -f, repositorio2 no se borra:</p>
+
+<img src="./img/gitclean4.PNG" alt="">
+
+<img src="./img/gitclean5.PNG" alt="">
+
+<p class="answer">Con git clean -df, tanto el documento como el repositorio se borran.</p>
+
+<p class="answer">Finalmente, con <code>git clean -xf</code>, no solo podemos eliminar documentos sin
+seguimiento, sino que también podemos eliminar cualquier documento que Git
+normalmente ignora, como .gitignore.</p>
+
+
+                          <p class="question"> git checkout -b </p>
+                                      <p class="answer">Crear y cambiar inmediatamente a la nueva rama <br><code> git checkout -b (name_newBranch)</code></br>
+                                      </p>
+                          <p class="question">git merge</p>
+                                      <p class="answer"> Combinar la rama especificada en la rama actual.<br><code> git merge (branch)</code></br>
+                                      </p>
+
+                                      <img src="img/gitMerge.png">
+
+
+                                      <p class="question">git log</p>
+                                      <p class="answer"> Muestra la historia del desarrollo de este proyecto<br><code> git log --oneline </code></br>
+                                      </p>
+                                      <img src="img/gitLog.png">
+                          <p class="question">git log --oneline --graph</p>
+                                      <p class="answer"> Podemos ver más claramente cuando las ramas se separaron y luego cuando se fusionaron de nuevo.<br><code>git log --oneline --graph</code></br>
+                                      </p>
+                                      <img src="img/gitLogGraph.png">
+                          <p class="question">git tag </p>
+                                      <p class="answer"> El comando tag, básicamente, consiste en poner un marcador permanente en un commit en concreto para que pueda ser usado para comparar con otro commit en el futuro.
+                                          <br><code> git -a v1.0 </code></br>
+                                      </p>
+                                      <img src="img/gitTag.png">
+                          <p class="question">git pull </p>
+                                      <p class="answer"> Busca en un repositorio remoto y trata de combinar en la rama actual lo que trajo del remoto.<br><code> git pull (github) </code></br>
+                                      </p>
+                          <p class="question">git fetch </p>
+                                      <p class="answer"> Se usa para sincronizar el repositorio local con otro remoto, bajando los datos no tenes a nivel local. <br><code> git fetch (github)  </code></br>
+                                      </p>
+                          <p class="question">git push </p>
+                                      <p class="answer"> Actualiza las refs remotas usando refs locales, mientras envía objetos necesarios para completar las refs dadas <br><code> git push (github)   </code></br>
+                                      </p>
+
+                                      <img src="img/gitRes.png">
+
+</section>
+
+
+
+<section>
+  <h1 class="titulo-tema">Crear y utilizar un proyecto GIT en Eclipse</h1>
+
+  <p class="question">Empecemos...</p>
+
+<p class="answer">Para
+empezar tenemos que crear un proyecto en
+Eclipse, la opción a elegir será Static Web Project. La
+encontraremos en el menú desplegable en la parte
+del explorador de proyectos.
+En la captura podemos ver como se crea un nuevo
+proyecto con su nombre y la carpeta donde se
+guardará el progreso.</p>
+
+<img src="./img/proyectoeclipse1.png">
+
+
+<p class="question">Compartiendo el proyecto</p>
+
+<p class="answer">Una
+vez creado toca compartir el proyecto. Para
+ello vamos al proyecto y buscamos las siguientes
+opciones: Team > Share Proyect.
+Cuando estemos ahí iremos a crear un nuevo
+repositorio, seleccionamos la opción de “Use or create
+repository in parent folder or project”.
+Hecho lo anterior ahora solo tendremos que
+seleccionar el proyecto tal como está en la imagen y
+pulsar en Create Repository.</p>
+
+<img src="./img/proyectoeclipse2.png" alt="">
+
+
+<p class="question">Subiendo al repositorio</p>
+
+<p class="answer">Después
+haremos un commit y subiremos los
+cambios de la rama master (Push Branch Master).
+Donde tendremos que poner la URL de nuestro
+repositorio de GIT.
+Esto nos subirá los commits y creará un repositorio
+remoto .</p>
+
+<img src="./img/proyectoeclipse3.png" alt="">
+
+<p class="question">Añadiendo el .gitignore</p>
+
+
+
+<p class="answer">Añadimos
+el archivo .gitignore
+Forma 1: mediante los snippets
+Descargaremos el archivo gitignore de Internet y lo
+añadiremos a la plantilla de snippet. De esta forma,
+cuando lo necesitemos solo tendremos que pegar la
+plantilla en un archivo de texto dentro del proyecto:</p>
+
+<img src="./img/proyectoeclipse4.png" alt="">
+
+<p class="answer">Una muestra del contenido del gitignore.</p>
+
+<img src="./img/proyectoeclipse5.png" alt="">
+
+<p class="question"></p>
+
+<p class="answer">Ahora ya tenemos la plantilla y la podemos usar en
+todos nuestros proyecto. En nuestro caso la
+importaremos al archivo que hemos creado
+anteriormente.</p>
+
+<img src="./img/proyectoeclipse6.png" alt="">
+
+<p class="answer">La otra forma sería descargar el archivo gitignore de
+Internet y moverlo a la carpeta del proyecto. Donde
+tenemos WebContent, .git, .settings.
+¡Y ya hemos terminado!</p>
+<img src="./img/proyectoeclipse7.png" alt="">
+
+
+
+
+</section>
+
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+<section id="eclipse" class="wrapper">
+
+<div class="temas-container">
+
+  <ul>
+    <li><p>Índice</p></li>
+    <li class="active"><p>Tema 0. ¿Qué es GitHub?</p></li>
+    <li><p>Tema 1. ¿Qué es GitHub?</p></li>
+    <li><p>Tema 2. ¿Qué es GitHub?</p></li>
+    <li><p>Tema 3. ¿Qué es Eclipse?</p></li>
+    <li><p>Tema 4. ¿Qué es Eclipse?</p></li>
+  </ul>
+
+
+</div><div class="tema-content-container">
+<button type="button" name="button" class="back"></button>
+
+<section>
+  <h1 class="titulo-tema">GITHUB</h1>
+
+    <p class="question">¿Qué es un sistema de control de versiones?</p>
+
+                <p class="answer">Un sistema de control de versiones (CVS) te permite realizar un seguimiento de la historia de una colección de archivos y además incluye la funcionalidad de revertir a una versión anterior.a colección de archivos usualmente es código fuente
+                    de algún lenguaje de programación, sin embargo, un sistema de control de versiones funciona con cualquier tipo de archivo</p>
+
+
+                    <p class="question">¿Qué es sistema de control de versiones distribuidas?</p>
+
+
+                            <p class="answer">Un sistema de control de versiones distribuida tiene un servidor central para guardar el repositorio y cada ususario puede hacer una copia completa del repositorio central y por ser una copia completa tiene las misma funcionalidades que el
+                                repositoriuo original
+                            </p>
+
+                        <img src="img/whatISgit.png">
+
+
+
+
+
+
+</section>
+
+
+
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+<script type="text/javascript">
+$(".welcome-message h1").fadeOut(0);
+$(".welcome-message .dialog").fadeOut(0);
+$(document).ready(function(){
+
+
+  $(".welcome-message h1").delay(400).fadeIn(2000);
+  $(".welcome-message h1").delay(2000).fadeOut(2000);
+    $(".welcome-message .dialog").delay(6500).fadeIn(200);
+
+});
+
+
+
+</script>
 
 
   </body>
