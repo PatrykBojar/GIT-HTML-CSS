@@ -14,6 +14,7 @@ body{
   font-family: "Josefin Sans", sans-serif, arial, helvetica;
   margin:0;
   padding:0;
+  overflow: hidden;
 }
 
 img{
@@ -220,6 +221,7 @@ h1{
   padding: 10px;
 }
 
+
 </style>
 
   </head>
@@ -233,17 +235,17 @@ h1{
 
           <p>Elija una opción:</p>
 
-              <div class="myBtn">
+              <a href="#git" class="myBtn">
                 <div class="git icon">
 
                 </div>
               <p>  GIT</p>
-              </div><div class="myBtn">
+            </a><a href="#github" class="myBtn">
                 <div class="github icon">
 
                 </div>
                 <p>GITHUB</p>
-              </div><div class="myBtn">
+              </a><div class="myBtn">
                 <div class="people icon">
 
                 </div>
@@ -646,7 +648,7 @@ normalmente ignora, como .gitignore.</p>
 
 
 <section>
-  <h1 class="titulo-tema">Crear y utilizar un proyecto GIT en Eclipse</h1>
+  <h1 class="titulo-tema">Crear y utilizar un proyecto GIT en Eclipse: Básico</h1>
 
   <p class="question">Empecemos...</p>
 
@@ -730,6 +732,60 @@ tenemos WebContent, .git, .settings.
 
 
 
+<section>
+
+  <h1 class="titulo-tema">Utilizar GIT en Eclipse: Avanzado</h1>
+
+
+    <p class="question">GIT IGNORE</p>
+<p class="answer">Para que ciertas carpetas o archivos sean ignorados por Git, por ejemplo, la carpeta bin, haga clic con el botón derecho en ellos y seleccione
+ Navigate => Ignore. Los elementos ignorados serán almacenados en un fichero llamado gitignore , lo que se debe añadir al repositorio
+</p>
+
+
+<p class="answer">Lo último que hay que hacer es crear un commit  del proyecto haciendo clic derecho en el nodo del proyecto y la selección de Team => Commit ... en el menú contextual.
+</p>
+
+<p class="answer">En el Asistente de confirmación, todos los archivos deben seleccionarse automáticamente. Introduzca un mensaje de confirmación (la primera línea debe ser titular similar, tal y como aparecerá en la vista de la historia) y pulsa el botón commit . Si la confirmación se ha realizado correctamente, los símbolos de suma se habrán convertido en iconos de repositorio.
+</p>
+
+
+<p class="question">Commits</p>
+
+<p class="answer">Si desea confirmar los cambios a su repositorio, haga clic derecho en el proyecto (o los archivos que desea comprometerse) y seleccione Team => Commit ... . Esto abrirá una nueva ventana, que le permitirá seleccionar los archivos que desea confirmar. Antes de poder confirmar los archivos, tendrá que introducir un mensaje de confirmación en el cuadro de texto superior. Después de que haya terminado, haga clic en Commit para cometer los archivos seleccionados con el repositorio.
+</p>
+
+
+
+<p class="answer">Si después se da cuenta de que su commit anterior estaba incompleto (por ejemplo, se olvidó de enviar un archivo) o el mensaje de confirmación fue incorrecto, puede que desee utilizar Modificar el commit anterior.</p>
+
+
+<p class="question">Adding Files</p>
+
+
+<p class="answer">Para agregar un nuevo archivo al repositorio, primero tendrá que crearlo en el proyecto compartido. El nuevo archivo, aparecerá con un signo de interrogación.</p>
+
+<p class="answer">Haga clic derecho en él y navegue hasta team => add to index . El signo de interrogación se convertirá en un símbolo de "+" y el archivo será rastreado por Git, pero aún no está comprometido. Todas las carpetas principales del archivo deben tener ahora un símbolo que se asemeja a un asterisco que indica que está "en escena".
+<br>En el siguiente commit, el archivo se agregará al repositorio y el símbolo de suma se convertirá en un icono de repositorio.
+</p>
+
+<p class="answer">Los iconos de repositorio de todos los padres del archivo (paquetes / proyecto ...) se convertirán en iconos escalonados.
+</p>
+
+
+<p class="question">Deshaciendo cambios</p>
+<p class="answer">Si desea revertir cualquier cambio, hay dos opciones. Puede comparar cada archivo que desea revertir con la revisión HEAD () y deshacer algunos o todos los cambios realizados.En segundo lugar, puede restablecer su proyecto, haciendo que los cambios en el directorio de trabajo sean revertidos.
+</p>
+
+
+<p class="question">Revertir mediante Comparar</p>
+
+<p class="answer">Para restablecer todos los cambios realizados en su proyecto, haga clic con el botón derecho del ratón en el nodo del proyecto y vaya a team => Reset .... Seleccione la rama a la que desea restablecer (si no ha creado ninguna otra rama, habrá sólo una) y seleccione Duro como tipo de reinicio. Al confirmar esta operación, todos los cambios se restablecerán en el último commit.</p>
+
+</section>
+
+
+
 </div>
 
 
@@ -741,7 +797,7 @@ tenemos WebContent, .git, .settings.
 
 
 
-<section id="eclipse" class="wrapper">
+<section id="github" class="wrapper">
 
 <div class="temas-container">
 
