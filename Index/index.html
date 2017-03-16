@@ -7,254 +7,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
 
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:700');
-        body {
-            font-family: "Josefin Sans", sans-serif, arial, helvetica;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        a{
-          text-decoration: none;
-          color:white;
-
-        }
-
-        img {
-            border-radius: 5px;
-        }
-
-        .main-container {
-            width: 100%;
-            height: 100vh;
-            background: #232526;
-            /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #232526, #414345);
-            /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to left, #232526, #414345);
-            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-            color: white;
-            text-align: center;
-            padding-top: 20px;
-        }
-
-        .icon {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto;
-            background-size: 90% auto;
-            background-position: center;
-            background-repeat: no-repeat;
-            transition: all .2s;
-        }
-
-        .myBtn:hover .icon {
-            cursor: pointer;
-            transition: all .2s;
-            background-size: 100% auto;
-        }
-
-        .git {
-            background-image: url("./img/git.png");
-        }
-
-        .github {
-            background-image: url("./img/github.png");
-        }
-
-        .people {
-            background-image: url("./img/people.png");
-        }
-
-        .welcome {
-            width: 40%;
-            border-radius: 5px;
-            margin: 0 auto;
-            margin-bottom: 50px;
-            box-sizing: border-box;
-        }
-
-        h1 {
-            margin: 0;
-            padding: 0 0 20px;
-            font-weight: bold;
-        }
-
-        .dialog {
-            width: 50%;
-            height: 20%;
-            overflow: hidden;
-            margin: auto;
-            color: #fff;
-            text-align: center;
-            border-radius: 5px;
-            padding: 20px;
-        }
-
-        .welcome-message {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100vh;
-            background: #FFAFBD;
-            /* fallback for old browsers */
-            background: -webkit-linear-gradient(to left, #FFAFBD, #ffc3a0);
-            /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to left, #FFAFBD, #ffc3a0);
-            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        }
-
-        .welcome-message h1 {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 50%;
-            text-align: center;
-            height: 110px;
-            margin: auto;
-            color: white;
-            padding: 0;
-            box-sizing: border-box;
-            font-size: 60px;
-            padding: 10px 0;
-            border-top: 5px solid rgb(255, 255, 255);
-            border-bottom: 5px solid rgb(255, 255, 255);
-        }
-
-        .myBtn {
-            width: 33.20%;
-            float: left;
-        }
-
-        .wrapper {
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-
-        .wrapper ul {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-        }
-
-        .temas-container {
-            background-color: #3d3d3d;
-            color: white;
-            width: 20%;
-            float: left;
-            height: 100vh;
-            border-right: 2px solid rgba(0, 0, 0, .2);
-            box-sizing: border-box;
-        }
-
-        .temas-container ul li {
-          cursor: pointer;
-            margin: 20px;
-            padding:0;
-            padding: 10px;
-        }
-
-        .temas-container ul li:not(:first-of-type) {
-            margin-left: 30px;
-        }
-
-        .temas-container ul li:first-of-type{
-          font-size:30px;
-          border-bottom:2px solid rgba(255,255,255,.05);
-        }
-
-        .temas-container ul li:hover{
-            border-radius: 5px;
-            background-color: rgba(0, 0, 0, .1);
-            color: coral;
-        }
-
-        .back {
-            position: relative;
-            outline-style: none;
-            float: right;
-            cursor: pointer;
-            border: 0;
-            border-radius: 5px;
-            background-color: transparent;
-            width: 50px;
-            height: 50px;
-            padding: 5px;
-            background-image: url("./img/back.png");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-origin: content-box;
-            background-size: 100% auto;
-        }
-
-        .back:hover:after {
-            transition: all .2s;
-            opacity: 1;
-        }
-
-        .back:after {
-            transition: all .2s;
-            pointer-events: none;
-            left: -100px;
-            content: "Página inicial";
-            position: absolute;
-            width: 200px;
-            padding: 10px;
-            background-color: rgba(0, 0, 0, .5);
-            margin-top: 50px;
-            border-radius: 5px;
-            color: white;
-            text-align: center;
-            opacity: 0;
-        }
-
-        .back:hover {
-            background-color: rgba(0, 0, 0, .05);
-        }
-
-        .tema-content-container {
-            width: 80%;
-            float: left;
-            height: 100vh;
-            padding: 50px;
-            box-sizing: border-box;
-            color: #31464D;
-            overflow-y: auto;
-        }
-
-        .tema-content-container .titulo-tema {
-            font-size: 40px;
-            margin: 50px;
-            text-align: center;
-            color: #31464D;
-        }
-
-        .tema-content-container .question {
-            font-size: 25px;
-        }
-
-        .tema-content-container .answer {
-            background-color: rgba(0, 0, 0, .1);
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 50px;
-            text-align: justify;
-        }
-
-        .tema-content-container ul {
-            list-style: circle;
-            background-color: rgb(247, 245, 215);
-        }
-
-        .tema-content-container ul li {
-            padding: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
 
 </head>
 
@@ -278,12 +31,12 @@
                 </div>
                 <p>GITHUB</p>
             </a>
-            <div class="myBtn">
+            <a href="#quienes-somos" class="myBtn">
                 <div class="people icon">
 
                 </div>
                 <p>QUIÉNES SOMOS</p>
-            </div>
+            </a>
 
         </div>
     </div>
@@ -1067,6 +820,32 @@ Se basa en un sistema de gestión de código desarrollado por Linus Torvalds , l
 
 </section>
 
+
+
+<section id="quienes-somos">
+
+  <div class="main-footer-container">
+    <a href="#inicio" class="back-white"></a>
+      <div class="us-title">
+          <h1>CREADORES DE ESTA GUÍA</h1>
+      </div>
+      <div class="dev-gallery-container">
+          <div id="gustavo-img" class="img">  <p>Gustavo</p></div>
+
+          <div id="patryk-img" class="img"><p>Patryk</p></div>
+          <div id="matias-img" class="img"><p>Matías</p></div>
+
+
+
+      </div>
+
+      <footer>
+        Con <strong>♥</strong> por Matías, Patryk y Gustavo.
+      </footer>
+
+  </div>
+
+</section>
 
 
 
