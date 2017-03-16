@@ -153,7 +153,9 @@
         }
 
         .temas-container ul li {
+          cursor: pointer;
             margin: 20px;
+            padding:0;
             padding: 10px;
         }
 
@@ -166,7 +168,7 @@
           border-bottom:2px solid rgba(255,255,255,.05);
         }
 
-        .active {
+        .temas-container ul li:hover{
             border-radius: 5px;
             background-color: rgba(0, 0, 0, .1);
             color: coral;
@@ -258,13 +260,11 @@
 
 <body>
 
-    <div class="welcome-message">
+    <div id="inicio" class="welcome-message">
 
         <h1>BIENVENIDO</h1>
 
         <div class="dialog">
-
-            <p>Elija una opción:</p>
 
             <a href="#git" class="myBtn">
                 <div class="git icon">
@@ -296,30 +296,34 @@
                 <li>
                     <p>Índice</p>
                 </li>
-                <li class="active">
-                    <p>Tema 0. ¿Qué es GIT?</p>
+                <li>
+                    <a href="#tema1">Tema 1. ¿Qué es GIT?</a>
                 </li>
                 <li>
-                    <p>Tema 1. ¿Qué es GIT?</p>
+                    <a href="#tema2">Tema 2. Introducción a GIT</p>
                 </li>
                 <li>
-                    <p>Tema 2. ¿Qué es GIT?</p>
+                    <a href="#tema3">Tema 3. Comandos avanzados GIT</p>
                 </li>
                 <li>
-                    <p>Tema 3. ¿Qué es GIT?</p>
+                    <a href="#tema4">Tema 4. Comandos diarios GIT</p>
                 </li>
                 <li>
-                    <p>Tema 4. ¿Qué es GIT?</p>
+                    <a href="#tema5">Tema 5. Crear y utilizar un proyecto GIT en Eclipse: Básico</p>
                 </li>
+
+                <li><a href="#tema6">Tema 6. Modificar un proyecto GIT en Eclipse: Avanzado</a></li>
+
             </ul>
 
 
         </div>
         <div class="tema-content-container">
-            <button type="button" name="button" class="back"></button>
+            <a href="#inicio" class="back"></a>
 
             <section>
                 <h1 class="titulo-tema">GIT</h1>
+                <h1 id="tema1" class="titulo-tema">TEMA 1. ¿QUÉ ES GIT?</h1>
 
                 <p class="question">¿Qué es un sistema de control de versiones?</p>
 
@@ -371,7 +375,7 @@
                 </ul>
 
 
-                <p class="question">Comándos básicos en GIT</p>
+                <p id="tema2" class="titulo-tema">TEMA 2. INTRODUCCIÓN A GIT</p>
 
                 <p class="answer">Crea un directorio nuevo, ábrelo y ejecuta <code>git init</code> para crear un nuevo repositorio de git.
                 </p>
@@ -441,7 +445,7 @@
                 <p class="answer">Eliminará la rama <br><code>git branch -d (name_delBranch)</code></br>
                 </p>
 
-                <p class="question">git checkout
+                <p id="tema3" class="title-tema">TEMA 3. COMANDOS AVANZADOS GIT
                     <rama>
                 </p>
                 <p class="answer">
@@ -495,8 +499,6 @@
                 <img src="./img/gitcheckout5.png" alt="">
 
                 <br><br>
-
-
 
 
                 <p class="question">git revert</p>
@@ -636,6 +638,8 @@ seguimiento, sino que también podemos eliminar cualquier documento que Git
 normalmente ignora, como .gitignore.</p>
 
 
+  <p id="tema4" class="titulo-tema">TEMA 4. COMANDOS DIARIOS GIT</p>
+
                           <p class="question"> git checkout -b </p>
                                       <p class="answer">Crear y cambiar inmediatamente a la nueva rama <br><code> git checkout -b (name_newBranch)</code></br>
                                       </p>
@@ -676,7 +680,7 @@ normalmente ignora, como .gitignore.</p>
 
 
 <section>
-  <h1 class="titulo-tema">Crear y utilizar un proyecto GIT en Eclipse: Básico</h1>
+  <h1 id="tema5" class="titulo-tema">TEMA 5. CREAR Y UTILIZAR UN PROYECTO GIT EN ECLIPSE: BÁSICO</h1>
 
   <p class="question">Empecemos...</p>
 
@@ -762,7 +766,7 @@ tenemos WebContent, .git, .settings.
 
 <section>
 
-  <h1 class="titulo-tema">Utilizar GIT en Eclipse: Avanzado</h1>
+  <h1 id="tema6" class="titulo-tema">TEMA 6. MODIFICAR UN PROYECTO GIT EN ECLIPSE: AVANZADO</h1>
 
 
     <p class="question">GIT IGNORE</p>
@@ -959,21 +963,21 @@ tenemos WebContent, .git, .settings.
 
   <ul>
     <li><p>Índice</p></li>
-    <li class="active"><p>Tema 0. ¿Qué es GitHub?</p></li>
-    <li><p>Tema 1. ¿Qué es GitHub?</p></li>
-    <li><p>Tema 2. ¿Qué es GitHub?</p></li>
-    <li><p>Tema 3. ¿Qué es Eclipse?</p></li>
-    <li><p>Tema 4. ¿Qué es Eclipse?</p></li>
+    <li><a href="#gitHub1">¿Qué es GitHub?</a></li>
+    <li><a href="#gitHub2">Crear una cuenta en GitHub</a></li>
+    <li><a href="#gitHub3">Manejo de repositorios</a></li>
+    <li><a href="#gitHub4">Crear un proyecto</a></li>
+    <li><a href="#gitHub5">Colaborar en un proyecto ajeno</a></li>
   </ul>
 
 
 </div><div class="tema-content-container">
-<button type="button" name="button" class="back"></button>
+<a href="#inicio" class="back"></a>
 
 <section>
   <h1 class="titulo-tema">GITHUB</h1>
 
-  <p class="question">¿Qué es GitHub?</p>
+  <p id="gitHub1" class="question">¿Qué es GitHub?</p>
 
   <p class="answer">Fundada en abril de 2008 , GitHub es un servicio de alojamiento basado en la web donde cualquier persona puede compartir código de programación con alguien más. GitHub ofrece sus servicios de forma gratuita al público en general y para las empresas, que ofrecen pagó planes de servicio. GitHub también ofrece un servicio llamado GitHub Gist , que es un servicio Pastebin como para pegar y rápidamente compartir fragmentos de código.<br><br>
 Se basa en un sistema de gestión de código desarrollado por Linus Torvalds , llamado Git. La utilización de servicios de alojamiento de GitHub proporciona a los usuarios el control de revisión de su código, lo que les permite a otros ver y todas las revisiones de código compartido en el sitio.</p>
@@ -997,7 +1001,9 @@ Se basa en un sistema de gestión de código desarrollado por Linus Torvalds , l
 </ul>
 
 
-<p class="question">Aprendiendo a usar GitHub</p>
+
+
+<p id="gitHub2" class="titulo-tema">CREAR UNA CUENTA EN GITHUB</p>
 
 <p class="answer">Para crear una cuenta GitHub vamos a seguir los siguientes pasos:</p>
 
@@ -1018,7 +1024,7 @@ Se basa en un sistema de gestión de código desarrollado por Linus Torvalds , l
 </ul>
 
 
-<p class="question">Manejo de repositorios</p>
+<p id="gitHub3" class="titulo-tema">MANEJO DE REPOSITORIOS</p>
 
 <p class="question">Crear un repositorio</p>
 
@@ -1028,7 +1034,7 @@ Se basa en un sistema de gestión de código desarrollado por Linus Torvalds , l
 
 <img src="./img/gitHub32.png" alt="">
 
-<p class="question">Crear un proyecto</p>
+<p id="gitHub4" class="titulo-tema">CREAR UN PROYECTO</p>
 
 <p class="answer">Al crear el repositorio, inmediatamente nos va a llevar a él. Como nuestro proyecto no tiene nada en su interior, no nos va a mostrar más que una ayuda para subir archivos y proyectos</p>
 
@@ -1036,7 +1042,7 @@ Se basa en un sistema de gestión de código desarrollado por Linus Torvalds , l
 <img src="./img/gitHub33.png" alt="">
 
 
-<p class="question">Colaborar en un proyecto ajeno</p>
+<p id="gitHub5" class="titulo-tema">COLABORAR EN UN PROYECTO AJENO</p>
 
 <p class="answer">Para colaborar en un proyecto ajeno simplemente basta con buscarlo dentro de los repositorios, y luego presionar el botón fork. Esto genera automáticamente una copia del mismo en tu perfil.</p>
 
